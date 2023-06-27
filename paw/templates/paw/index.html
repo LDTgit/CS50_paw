@@ -1,0 +1,17 @@
+{% extends "paw/layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'paw/index.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+    <h1>Calendar</h1>
+    <div id="calendar-container"></div>
+    <div id="appointments_list"></div>
+    <div id="new_app" style="display: none;"></div>
+    <div class="pagination"></div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<h1>Register new vet</h1>
+
+{% if message %}
+    <div>{{ message }}</div>
+{% endif %}
+
+<form action="{% url 'vet_register' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input class="form-control" autofocus type="text" name="vet_name" placeholder="Vet Name" style ="width:50%">
+        <textarea class="form-control" style ="width:50%" cols="50" rows="5" type="text" name="vet_notes" placeholder="Vet Notes"></textarea>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Register">
+</form>

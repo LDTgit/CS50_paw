@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}PAW{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="{% static 'paw/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'paw/index.js' %}"></script>
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <section>
+            <nav>
+              <ul id="menuItems">
+                <li><img src="{% static 'paw/images/logo1.png' %}" id="logo"></img></li>
+                {% if user.is_authenticated %}
+                    <li><a id='current-username'>{{ user.username }}</a></li>
+                {% endif %}
+                <li><span id="calendar">Calendar</span></li>
+                <li><span id="search">Search</span></li>
+                {% if user.is_authenticated %}
+                    {% if user.is_superuser %}
+                    <li><span id='register-vet'>Register new vet</span></li>
+                    <li><span id='register'>Register new user</span></li>
+                    {% endif %}
+                    <li><a href="{% url 'logout' %}" id='logout'>Log Out</a></li>
+                {% else %}
+                    <li><span id='login'>Log In</span></li>
+                {% endif %}
+              </ul>
+            </nav> 
+        </section>
+        
+        <div class="body">
+            <div id="page_display">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

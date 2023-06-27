@@ -1,0 +1,352 @@
+html { font-size: 16px; }
+
+@media (max-width: 550px) {
+  html { font-size: 0.5em; }
+  .appointment-container, .appointment-slot, #app-container, #new-appointment-button, #searched_list_title, .pagination {
+    font-size: 1.625rem;
+  }
+  .edit-button, .delete-button, .save-button, .cancel-button, #new_schedule_button, #back-button, .btn{
+    font-size: 1.625rem;
+    width: 10rem;
+ }
+ #filter-container, #search_container, .content-container{
+    font-size: 1.625rem;
+    width: max-content;
+ }
+ #vet-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.625rem;
+ }
+ select{
+    width: 15em;
+    font-size: 1.625rem;
+ }
+ #add_app_time, #notes_container{
+    display: flex;
+    flex-direction: column;
+ }
+ th, td { 
+    padding: 1.313rem;
+}
+  
+}
+
+@media (min-width: 551px) {
+ html { font-size: 1rem; }
+ #new-appointment-button{
+    font-size: 0.813rem;
+ }
+ .edit-button, .delete-button, .save-button, .cancel-button, #new_schedule_button, #back-button{
+    font-size: 0.813rem;
+    width: 5rem;
+ }
+ .appointment-container{
+    max-width: 540px;
+ }
+ th, td { 
+    padding: 0.5rem;
+ }
+  
+}
+
+body{
+    cursor: default;
+}
+h1{
+    font-size: 1.5rem;
+}
+#edit_client_notes, #add_notes, #edit_vet_notes, #edit_pet_notes, #client_name, #client_notes, #pet_name, #pet_notes, #add_vet, #add_client, #add_pet, #add_timeslot, #add_app_date{
+    width: 90%;
+    max-width: -webkit-fill-available;
+}
+
+#page_display{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+nav {
+    background: #f9f9f9;
+}
+
+#menuItems {
+    list-style: none;
+    display: flex;
+    padding-left: 0.25rem;
+}
+
+li {
+    padding-right: 2rem;
+}
+
+a {
+    color: #8f8f8f;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+#current-username{
+    cursor: default;
+    color: #000000;
+}
+.current{
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+#logo {
+    width: 4rem;
+    height: 4rem;
+    top: 0.625rem;
+    left: 0.625rem;
+    z-index: 1000;
+    margin-right: 1rem;
+}
+
+#app_div_cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column
+}
+
+#calendar, #login, #register, #register-vet, #search{
+    color: #8f8f8f;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+#calendar:hover, #login:hover, #register:hover, #register-vet:hover, #search:hover {
+    color: #000000;
+    cursor:pointer;
+}
+
+#new_schedule{
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-container, .appointment-slot, #app-container{
+    box-shadow: 0 1.5rem 2.375rem 0.188rem rgba(0,0,0,.14), 0 0.563rem 2.875rem 0.5rem rgba(0,0,0,.12), 0 0.688rem 0.938rem -0.438rem rgba(0,0,0,.2);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 142px;  
+}
+
+#new-appointment-container{
+    position: absolute; 
+    background: white; 
+    margin-top: 20vh;
+    border-radius:1.25rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 90%;
+    display: flex;
+    min-width: 142px;
+}
+.content-container{
+    box-shadow: 0 1.5rem 2.375rem 0.188rem rgba(0,0,0,.14), 0 0.563rem 2.875rem 0.5rem rgba(0,0,0,.12), 0 0.688rem 0.938rem -0.438rem rgba(0,0,0,.2);
+    padding: 1rem;
+    border-radius: 1.25rem;
+}
+
+#appointments-date-container{
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+#months-nav, #year-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#prev-date, #next-date, #prev-year, #next-year{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    width: 12.5rem;
+    justify-content: center;
+}
+
+#prev-date:hover, #next-date:hover, #prev-year:hover, #next-year:hover{
+    color:rgb(67, 67, 160);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    background-color: #e6e6e6;
+    margin: 0 auto;
+}
+th, td { 
+    font-weight: bold;
+    text-align: center;
+}
+  
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 28.125rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.938rem 2.5rem rgba(0, 0, 0, 0.12);
+}
+
+#viewed-date, #viewed-year{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+#viewed-date{
+    font-size: 1.25rem;
+}
+#viewed-year{
+    font-size: 1.25rem;
+}
+.day {
+    cursor: pointer;
+}
+
+.day:hover{
+    background-color: #8ee2f0;
+    border: #000000;
+    border-radius: 50%;
+}
+
+.edit-button, .delete-button, .save-button, .cancel-button, #new_schedule_button{
+    background-color: #55ACEE;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    box-shadow: #55ACEE 0 1px 0 0 inset;
+    color: #fff;
+    line-height: 1.15385;
+    margin-right: 0.25rem;
+    padding: 0.5rem .8em;
+}
+
+#new-appointment-button{
+    background-color: #35719f;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    box-shadow: #35719f 0 1px 0 0 inset;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem .8em;
+    width: fit-content;
+    align-self: center;
+    font-weight: 600;
+}
+
+#searchInput {
+    width: 40rem;
+    font-size: 1rem; 
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem; 
+    border: 1px solid #ddd; 
+    margin-bottom: 0.75rem; 
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#add_client_container, #add_pet_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    flex-direction: column;
+}
+
+label, select {
+    padding-right: 0.25rem;
+    align-self: baseline;
+}
+
+#new_client_container, #new_pet_container{
+    padding-right: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.list_element:hover{
+    cursor:pointer;
+    color:#0b6ab4;
+    font-weight: 600;
+}
+
+.list_element{
+    width: fit-content;
+}
+
+#profile_container{
+    align-self: center;
+    box-shadow: 0 1.5rem 2.375rem 0.188rem rgb(117 142 188 / 32%), 0 0.563rem 2.875rem 0.5rem rgb(81 122 179 / 29%), 0 0.688rem 0.938rem -0.438rem rgb(75 154 209 / 51%);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#appointments_list{
+    display: flex;
+    flex-direction: column;
+}
+
+#searched_list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.weekend{
+    color:red;
+}
+
+#vet_description{
+    margin-left: 0.25rem;
+}
+
+#back-button{
+    text-indent: -0.938rem;
+    padding: 0.313rem 0 0.313rem 0.625rem;
+	overflow: auto;
+    background-color: #0b6ab4;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    box-shadow: #0b6ab4 0 1px 0 0 inset;
+    color: #fff;
+    line-height: 1.15385;
+}
+
+.message{
+    color: red;
+    font-size: 1.5rem;
+}
